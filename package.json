@@ -1,0 +1,42 @@
+{
+  "name": "cnpj-cli",
+  "version": "0.0.0",
+  "description": "A command line interface for generating, validating and formatting CNPJs",
+  "main": "index.js",
+  "bin": {
+    "cnpj": "index.js"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "prettier --write && ava"
+  },
+  "keywords": [
+    "cli-app",
+    "cli",
+    "cnpj"
+  ],
+  "author": "Gabriel Izaias",
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "prettier": "^1.9.1"
+  },
+  "dependencies": {
+    "cnpj": "^1.0.2",
+    "meow": "^4.0.0",
+    "update-notifier": "^2.3.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 80,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "parser": "babylon"
+  }
+}
