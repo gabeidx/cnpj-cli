@@ -11,15 +11,17 @@ updateNotifier({ pkg }).notify();
 const cli = meow(
   `
   Usage
-    $ cnpj [--generate] [--validate] [--format] [<value>]
+    $ cnpj [--generate [--numbers-only]] [--validate] [--format] [<value>]
 
   Options
-    -g, --generate     Generates a new valid CNPJ
-    -v, --validate     Validates a given CNPJ
-    -f, --format       Formats a given CNPJ
+    -g, --generate      Generates a new valid CNPJ
+    -n, --numbers-only  With --generate, outputs only the numbers for a CNPJ
+    -v, --validate      Validates a given CNPJ
+    -f, --format        Formats a given CNPJ
 
   Examples
     $ cnpj --generate
+    $ cnpj --generate --numbers-only
     $ cnpj --validate 38453656000132
     $ cnpj --format 38453656000132
 `,
@@ -28,6 +30,10 @@ const cli = meow(
       generate: {
         type: 'boolean',
         alias: 'g',
+      },
+      numbersOnly: {
+        type: 'boolean',
+        alias: 'n',
       },
       validate: {
         type: 'boolean',
@@ -42,7 +48,9 @@ const cli = meow(
 );
 
 if (cli.input.length === 0 || cli.flags.generate) {
-  console.log(CNPJ.generate());
+  const cnpj = CNPJ.generate();
+  const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj;
+  console.log(value);
   return process.exit(0);
 }
 
