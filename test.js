@@ -4,6 +4,9 @@ import execa from 'execa';
 test('it generates a valid CNPJ', async t => {
   const generated = await execa.stdout('./index.js');
   t.true(generated.length > 0);
+
+  const validated = await execa.stdout('./index.js', ['-v', generated])
+  t.true(validated === 'true');
 });
 
 test('it validates a given CNPJ', async t => {
