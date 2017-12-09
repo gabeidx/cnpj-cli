@@ -52,3 +52,8 @@ if (cli.input.length) {
     return process.exit(0);
   }
 
+  if (cli.flags.format) {
+    console.log(CNPJ.format(cli.input[0]));
+    return process.exit(0);
+  }
+}
