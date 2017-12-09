@@ -46,3 +46,9 @@ if (cli.input.length === 0 || cli.flags.generate) {
   return process.exit(0);
 }
 
+if (cli.input.length) {
+  if (cli.flags.validate) {
+    console.log(CNPJ.validate(cli.input[0]));
+    return process.exit(0);
+  }
+
