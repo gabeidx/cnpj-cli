@@ -14,7 +14,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "prettier --write && ava"
+    "test": "ava"
   },
   "keywords": [
     "cli-app",
