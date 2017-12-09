@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "description": "A command line interface for generating, validating and formatting CNPJs",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielizaias/cnpj-cli"
+  },
   "bin": {
     "cnpj": "index.js"
   },
