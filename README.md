@@ -16,13 +16,25 @@ $ yarn global add cnpj-cli
 
 ## Usage
 
-### Generate a valid CNPJ (formatted)
+### Generate a valid CNPJ
+
+Formatted:
 
 ```bash
 $ cpnj
 $ cnpj --generate
 $ cnpj -g
 ```
+
+Not formatted (numbers only):
+
+```bash
+$ cpnj --numbers-only
+$ cnpj --generate --numbers-only
+$ cnpj -n
+$ cnpj -gn
+```
+
 
 ### Validate a CNPJ
 
