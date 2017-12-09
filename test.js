@@ -17,3 +17,7 @@ test('it validates a given CNPJ', async t => {
   t.true(invalid === 'false');
 });
 
+test('it formats a given CNPJ', async t => {
+  const formatted = await execa.stdout('./index.js', ['-f', '29709817000115']);
+  t.is(formatted, '29.709.817/0001-15');
+});
