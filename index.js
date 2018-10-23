@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-'use strict';
+'use strict'
 
-const CNPJ = require('cnpj').default;
-const meow = require('meow');
-const updateNotifier = require('update-notifier');
-const pkg = require('./package.json');
+const CNPJ = require('cnpj').default
+const meow = require('meow')
+const updateNotifier = require('update-notifier')
+const pkg = require('./package.json')
 
-updateNotifier({ pkg }).notify();
+updateNotifier({ pkg }).notify()
 
 const cli = meow(
   `
@@ -45,23 +45,23 @@ const cli = meow(
       },
     },
   }
-);
+)
 
 if (cli.input.length === 0 || cli.flags.generate) {
-  const cnpj = CNPJ.generate();
-  const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj;
-  console.log(value);
-  return process.exit(0);
+  const cnpj = CNPJ.generate()
+  const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj
+  console.log(value)
+  return process.exit(0)
 }
 
 if (cli.input.length) {
   if (cli.flags.validate) {
-    console.log(CNPJ.validate(cli.input[0]));
-    return process.exit(0);
+    console.log(CNPJ.validate(cli.input[0]))
+    return process.exit(0)
   }
 
   if (cli.flags.format) {
-    console.log(CNPJ.format(cli.input[0]));
-    return process.exit(0);
+    console.log(CNPJ.format(cli.input[0]))
+    return process.exit(0)
   }
 }
