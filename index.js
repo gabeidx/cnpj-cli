@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 
-const CNPJ = require('cnpj').default
+const { validate, format, generate } = require('cnpj')
 const meow = require('meow')
 const updateNotifier = require('update-notifier')
 const pkg = require('./package.json')
@@ -48,7 +48,7 @@ const cli = meow(
 )
 
 if (cli.input.length === 0 || cli.flags.generate) {
-  const cnpj = CNPJ.generate()
+  const cnpj = generate()
   const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj
   console.log(value)
   return process.exit(0)
@@ -56,12 +56,12 @@ if (cli.input.length === 0 || cli.flags.generate) {
 
 if (cli.input.length) {
   if (cli.flags.validate) {
-    console.log(CNPJ.validate(cli.input[0]))
+    console.log(validate(cli.input[0]))
     return process.exit(0)
   }
 
   if (cli.flags.format) {
-    console.log(CNPJ.format(cli.input[0]))
+    console.log(format(cli.input[0]))
     return process.exit(0)
   }
 }

@@ -904,10 +904,10 @@ cli-truncate@^1.0.0:
     slice-ansi "^1.0.0"
     string-width "^2.0.0"
 
-cnpj@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-1.0.2.tgz#839db93ae71901543bafbddbfafdb4c6358c22cd"
-  integrity sha512-D2FfPOK/MZMgQFZzti6ZcclcRUw5b5lb7TiyuyWp3wP+TYe49CufHLBiYMlenRh5Ady45fnGQw3HAh/YMTMODg==
+cnpj@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-2.0.0.tgz#b742b298e4591d08e2fa7799c2d44a8d70b9be1d"
+  integrity sha512-eCpfD5qaP4jARA84ibpLcb3U/bIWSAPQP/lGvkxyotTcKQu/X6ZxIDbZqrEdJMdoeSz1a5ftuRK+YdbGOJjFrA==
 
 co-with-promise@^4.6.0:
   version "4.6.0"
