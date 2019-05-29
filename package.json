@@ -31,7 +31,7 @@
   "dependencies": {
     "cnpj": "^2.0.0",
     "meow": "^5.0.0",
-    "update-notifier": "^2.3.0"
+    "update-notifier": "^3.0.0"
   },
   "prettier": {
     "semi": false,
