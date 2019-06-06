@@ -24,7 +24,7 @@
   "author": "Gabriel Izaias",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^1.4.1",
+    "ava": "^2.0.0",
     "execa": "^1.0.0",
     "prettier": "^1.17.1"
   },
