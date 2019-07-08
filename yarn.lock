@@ -804,10 +804,10 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
-cnpj@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-2.0.0.tgz#b742b298e4591d08e2fa7799c2d44a8d70b9be1d"
-  integrity sha512-eCpfD5qaP4jARA84ibpLcb3U/bIWSAPQP/lGvkxyotTcKQu/X6ZxIDbZqrEdJMdoeSz1a5ftuRK+YdbGOJjFrA==
+cnpj@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-2.0.1.tgz#4db7ad88165da3521f78b6e5cb50c283c80b7599"
+  integrity sha512-kbmtHMHbfvLvHohQpkG+FYjaGOYPgiGxxqZa6Ya4a4KlGoYVdqXUt1BHn7Mlj/M+86MIHwlgVh4KTyIkYOzEEQ==
 
 code-excerpt@^2.1.1:
   version "2.1.1"
