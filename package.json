@@ -26,7 +26,7 @@
   "devDependencies": {
     "ava": "^2.1.0",
     "execa": "^1.0.0",
-    "prettier": "^1.17.1"
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "cnpj": "^2.0.1",
