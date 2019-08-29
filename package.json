@@ -25,7 +25,7 @@
   "license": "MIT",
   "devDependencies": {
     "ava": "^2.3.0",
-    "execa": "^2.0.3",
+    "execa": "^2.0.4",
     "prettier": "^1.18.2"
   },
   "dependencies": {
