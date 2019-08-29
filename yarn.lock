@@ -767,10 +767,10 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
-cnpj@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-2.0.1.tgz#4db7ad88165da3521f78b6e5cb50c283c80b7599"
-  integrity sha512-kbmtHMHbfvLvHohQpkG+FYjaGOYPgiGxxqZa6Ya4a4KlGoYVdqXUt1BHn7Mlj/M+86MIHwlgVh4KTyIkYOzEEQ==
+cnpj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-3.0.0.tgz#3d6225a9bed4b8b62404cdc9b7fab3a7c54e83e4"
+  integrity sha512-kpi0/5UyHLqIHVAp9wzhALt2IWNSV3KrqWqSLyo42aAoZrElnueN9QAhojb1gF4R+VOXHhywKRsLtjz9dIOfxw==
 
 code-excerpt@^2.1.1:
   version "2.1.1"
