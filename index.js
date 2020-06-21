@@ -9,7 +9,7 @@ const pkg = require('./package.json')
 updateNotifier({ pkg }).notify()
 
 const cli = meow(
-  `
+	`
   Usage
     $ cnpj [--generate [--numbers-only]] [--validate] [--format] [<value>]
 
@@ -25,43 +25,43 @@ const cli = meow(
     $ cnpj --validate 38453656000132
     $ cnpj --format 38453656000132
 `,
-  {
-    flags: {
-      generate: {
-        type: 'boolean',
-        alias: 'g',
-      },
-      numbersOnly: {
-        type: 'boolean',
-        alias: 'n',
-      },
-      validate: {
-        type: 'boolean',
-        alias: 'v',
-      },
-      format: {
-        type: 'boolean',
-        alias: 'f',
-      },
-    },
-  }
+	{
+		flags: {
+			generate: {
+				type: 'boolean',
+				alias: 'g',
+			},
+			numbersOnly: {
+				type: 'boolean',
+				alias: 'n',
+			},
+			validate: {
+				type: 'boolean',
+				alias: 'v',
+			},
+			format: {
+				type: 'boolean',
+				alias: 'f',
+			},
+		},
+	}
 )
 
 if (cli.input.length === 0 || cli.flags.generate) {
-  const cnpj = generate()
-  const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj
-  console.log(value)
-  return process.exit(0)
+	const cnpj = generate()
+	const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj
+	console.log(value)
+	return process.exit(0)
 }
 
 if (cli.input.length) {
-  if (cli.flags.validate) {
-    console.log(validate(cli.input[0]))
-    return process.exit(0)
-  }
+	if (cli.flags.validate) {
+		console.log(validate(cli.input[0]))
+		return process.exit(0)
+	}
 
-  if (cli.flags.format) {
-    console.log(format(cli.input[0]))
-    return process.exit(0)
-  }
+	if (cli.flags.format) {
+		console.log(format(cli.input[0]))
+		return process.exit(0)
+	}
 }
