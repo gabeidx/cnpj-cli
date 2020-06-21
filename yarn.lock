@@ -793,10 +793,10 @@ clone@^1.0.2:
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
 
-cnpj@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-3.0.0.tgz#3d6225a9bed4b8b62404cdc9b7fab3a7c54e83e4"
-  integrity sha512-kpi0/5UyHLqIHVAp9wzhALt2IWNSV3KrqWqSLyo42aAoZrElnueN9QAhojb1gF4R+VOXHhywKRsLtjz9dIOfxw==
+cnpj@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/cnpj/-/cnpj-3.1.0.tgz#990f4bcc453afedb3446ce3ec81930f2feaf6684"
+  integrity sha512-k4cJw8fZgvDuI1lR0UroKpYeP589LTCfdYA3FwbcI0MqwDTukmWjNSKgqkSgscvgXsm/OJXPjDiMduqT0J6S6A==
 
 code-excerpt@^2.1.1:
   version "2.1.1"
