@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 'use strict'
 
-const { validate, format, generate } = require('cnpj')
-const meow = require('meow')
-const updateNotifier = require('update-notifier')
-const pkg = require('./package.json')
+import { readFile } from 'fs/promises'
+import { validate, format, generate } from 'cnpj'
+import { default as meow } from 'meow'
+import { default as updateNotifier } from 'update-notifier'
+
+const pkg = JSON.parse(((await readFile(new URL('../package.json', import.meta.url))) as unknown) as string)
 
 updateNotifier({ pkg }).notify()
 
@@ -26,6 +28,7 @@ const cli = meow(
     $ cnpj --format 38453656000132
 `,
 	{
+		importMeta: import.meta,
 		flags: {
 			generate: {
 				type: 'boolean',
@@ -51,17 +54,17 @@ if (cli.input.length === 0 || cli.flags.generate) {
 	const cnpj = generate()
 	const value = cli.flags.numbersOnly ? cnpj.replace(/\.|-|\//g, '') : cnpj
 	console.log(value)
-	return process.exit(0)
+	process.exit(0)
 }
 
 if (cli.input.length) {
 	if (cli.flags.validate) {
 		console.log(validate(cli.input[0]))
-		return process.exit(0)
+		process.exit(0)
 	}
 
 	if (cli.flags.format) {
 		console.log(format(cli.input[0]))
-		return process.exit(0)
+		process.exit(0)
 	}
 }
