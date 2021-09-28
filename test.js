@@ -21,8 +21,7 @@ test('it validates a given CNPJ', async (t) => {
 	const valid = (await execa('./index.js', ['-v', '29.709.817/0001-15'])).stdout
 	t.true(valid === 'true')
 
-	const invalid = (await execa('./index.js', ['-v', '29.709.817/0001-00']))
-		.stdout
+	const invalid = (await execa('./index.js', ['-v', '29.709.817/0001-00'])).stdout
 	t.true(invalid === 'false')
 })
 
