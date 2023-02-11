@@ -26,12 +26,12 @@
   "dependencies": {
     "cnpj": "^4.0.1",
     "meow": "^10.1.1",
-    "update-notifier": "^5.1.0"
+    "update-notifier": "^6.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.10.1",
     "@types/update-notifier": "^5.1.0",
-    "ava": "^3.15.0",
+    "ava": "^5.2.0",
     "del-cli": "^4.0.1",
     "execa": "^5.1.1",
     "prettier": "^2.4.1",
