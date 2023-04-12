@@ -1,6 +1,6 @@
 {
   "name": "cnpj-cli",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A command line interface for generating, validating and formatting CNPJs",
   "type": "module",
   "main": "dist/index.js",
