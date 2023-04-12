@@ -1,5 +1,5 @@
 import { default as test } from 'ava'
-import { default as execa } from 'execa'
+import { execa } from 'execa'
 
 test('it generates a valid CNPJ', async (t) => {
 	const { stdout: generated } = await execa('./dist/index.js')
